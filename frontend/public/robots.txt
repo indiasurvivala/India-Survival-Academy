@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Allow all critical assets for rendering and indexing
+Allow: /assets/
+Allow: /images/
+Allow: /favicon.svg
+
+# XML Sitemap
+Sitemap: https://indiasurvivalacademy.com/sitemap.xml

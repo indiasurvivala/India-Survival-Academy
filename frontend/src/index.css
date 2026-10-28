@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: #060a07;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+    background-color: #060a07;
+    color: #f4f1ea;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.04em;
+  }
+
+  /* Form Controls - Native Dark Mode Styling */
+  select {
+    color-scheme: dark;
+  }
+
+  select option {
+    background-color: #0c130e;
+    color: #f4f1ea;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #253327;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a503d;
+}
+
+/* Wilderness Atmospheric Overlays */
+.wilderness-card {
+  background: linear-gradient(180deg, rgba(17, 27, 20, 0.95) 0%, rgba(10, 16, 12, 0.98) 100%);
+  border: 1px solid rgba(203, 163, 88, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wilderness-card:hover {
+  border-color: rgba(203, 163, 88, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(203, 163, 88, 0.1);
+  transform: translateY(-2px);
+}
+
+.wilderness-glow {
+  box-shadow: 0 0 25px -5px rgba(203, 163, 88, 0.15);
+}
+
+.wilderness-badge {
+  background-color: rgba(23, 36, 27, 0.85);
+  border: 1px solid rgba(203, 163, 88, 0.25);
+  color: #dfb86c;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #cba358;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
